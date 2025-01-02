@@ -32,7 +32,7 @@
           </div>
           <div class="login-usuario">
             <p class="bem-vindo">Seja bem vindo(a)!</p>
-            <a class="entre">Entre</a>
+            <button class="btn-entre">Entre</button>
           </div>
         </div>
       </nav>
@@ -40,26 +40,28 @@
     <div class="menu-wrapper">
       <div class="menu">
         <div class="menu-nav">
-          <ul>
-            <div class="item1">
-              <li>
-                <img src="../assets/menu.svg" alt="menu" />
-                Todas as categorias
-              </li>
-            </div>
-            <div class="item2">
-              <li>Smartphones</li>
-            </div>
-            <div class="item3">
-              <li>Notebooks</li>
-            </div>
-            <div class="item4">
-              <li>Consoles</li>
-            </div>
-            <div class="item5">
-              <li>Headphones</li>
-            </div>
-          </ul>
+          <div class="items">
+            <ul>
+              <div class="item1">
+                <li>
+                  <img src="../assets/menu.svg" alt="menu" />
+                  Todas as categorias
+                </li>
+              </div>
+              <div class="item2">
+                <li>Smartphones</li>
+              </div>
+              <div class="item3">
+                <li>Notebooks</li>
+              </div>
+              <div class="item4">
+                <li>Consoles</li>
+              </div>
+              <div class="item5">
+                <li>Headphones</li>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -73,23 +75,20 @@ export default {
 </script>
 <style scoped>
 .pitchbar {
-  width: 100%;
+  width: 100vw;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 75px 8px 75px;
-  background-color: blue;
 }
 .pitchbar-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   max-width: 1248px;
   height: 24px;
   padding: 0px 16px 0px 16px;
-  background-color: aliceblue;
   gap: 12px;
 }
 
@@ -102,18 +101,15 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 75px 0 75px;
-  background-color: pink;
 }
 .navegacao {
-  width: 100%;
+  width: 100vw;
   max-width: 1248px;
   height: 112px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 16px;
-  background-color: #667085;
 }
 
 .busca {
@@ -164,67 +160,75 @@ span {
   size: 14px;
   line-height: 20px;
 }
-.entre {
+.btn-entre {
   width: 36px;
   height: 20px;
   color: #b3b9c6;
   size: 14px;
   line-height: 20px;
+  border: none;
   text-decoration: underline solid;
   cursor: pointer;
 }
 .menu-wrapper {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
   height: 42px;
-  padding: 0 96px;
   border-top: 1px solid #edeef1;
   border-bottom: 1px solid #edeef1;
-  background-color: #1861dd;
 }
 
 .menu {
-  width: 1248px;
+  width: 100vw;
+  max-width: 1248px;
   height: 42px;
-  background-color: red;
+  padding: 0 16px;
 }
 
 .menu-nav {
   display: flex;
+  align-items: center;
   width: 100%;
   max-width: 624px;
   height: 42px;
 }
-
-.menu ul {
+.items {
+  width: 624px;
+  height: 42px;
   display: flex;
   align-items: center;
-  padding: 12px 20px;
-  gap: 8px;
+  color: #667085;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 16px;
 }
-.menu ul li {
+.items ul {
+  display: flex;
+}
+.items ul li {
   display: flex;
   gap: 8px;
-  cursor: pointer;
 }
 .item1 {
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 119px;
   height: 42px;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 20px;
   gap: 8px;
 }
 .item2 {
   display: flex;
   align-items: center;
-  width: 116px;
+  width: 93px;
   height: 42px;
   padding: 12px 20px;
 }
 .item3 {
   display: flex;
   align-items: center;
-  width: 103px;
+  width: 93px;
   height: 42px;
   padding: 12px 20px;
 }
@@ -238,7 +242,7 @@ span {
 .item5 {
   display: flex;
   align-items: center;
-  width: 112px;
+  width: 93px;
   height: 42px;
   padding: 12px 20px;
 }

@@ -11,9 +11,10 @@ import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
-  name: "App",
-  components: TheHeader,
-  TheFooter,
+  components: {
+    TheHeader,
+    TheFooter,
+  },
 };
 </script>
 
@@ -21,5 +22,8 @@ export default {
 * {
   padding: 0;
   margin: 0;
+}
+ul {
+  list-style: none;
 }
 </style>

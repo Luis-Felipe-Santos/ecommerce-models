@@ -164,6 +164,7 @@ span {
   width: 36px;
   height: 20px;
   color: #b3b9c6;
+  background-color: #fff;
   size: 14px;
   line-height: 20px;
   border: none;
